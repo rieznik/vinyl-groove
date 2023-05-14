@@ -38,3 +38,66 @@ button {
   font-size: inherit;
   cursor: pointer;
 }
+
+.header {
+  background-color: var(--primary);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px;
+}
+
+.header__btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+.header__btn {
+  font-size: 1.125rem;
+  color: var(--white);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.icon {
+  max-width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  width: 20px;
+  stroke: currentColor;
+}
+
+.header__btn .icon_heart {
+  stroke-width: 1.5;
+}
+
+.header__btn .icon_folder {
+  stroke-width: 2;
+}
+
+.header__btn .icon_chevron {
+  stroke-width: 2;
+  transform: rotate(90deg);
+  padding: 2px;
+}
+
+.header__btn:hover,
+.header__btn:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Helper Class to hide text visually but keep it accessible for screen reader or other assistive software. */
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
