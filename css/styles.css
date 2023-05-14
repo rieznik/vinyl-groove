@@ -1,1 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Inter:wght@500&display=swap');
+
+:root {
+  --primary: #083644;
+  --secondary: #0a2530;
+  --ink: #738286;
+  --input-ink: #6c7072;
+  --borderline-color: #edeef0;
+  --white: #ffffff;
+}
