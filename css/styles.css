@@ -97,6 +97,16 @@ button {
   outline: none;
 }
 
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.search-form__input_wide {
+  grid-column: span 2;
+}
+
 /* Helper Class to hide text visually but keep it accessible for screen reader or other assistive software. */
 .visually-hidden {
   position: absolute;

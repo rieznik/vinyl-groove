@@ -64,9 +64,16 @@
         </ul>
       </nav>
     </header>
+
     <section class="container">
-      <form role="search" action="/search" method="GET">
-        <input type="text" id="artist" name="artist" placeholder="Artist" />
+      <form class="search-form" role="search" action="/search" method="GET">
+        <input
+          class="input search-form__input_wide"
+          type="text"
+          id="artist"
+          name="artist"
+          placeholder="Artist"
+        />
         <div class="custom-select">
           <select id="genre" name="genre">
             <option hidden selected value>Genre</option>
@@ -89,7 +96,7 @@
             <option value="2020-30">2020-30 рр.</option>
           </select>
         </div>
-        <div class="custom-select">
+        <div class="custom-select search-form__input_wide">
           <select id="country" name="country">
             <option hidden selected value>Country</option>
             <option value="us">US</option>
@@ -99,9 +106,10 @@
             <option value="japan">Japan</option>
           </select>
         </div>
-        <button type="submit">Search</button>
+        <button class="search-form__input_wide" type="submit">Search</button>
       </form>
     </section>
+
     <main>
       <article>
         <button></button>
