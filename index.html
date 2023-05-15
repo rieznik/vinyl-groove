@@ -66,7 +66,7 @@
     </header>
 
     <section class="container">
-      <form class="search-form" role="search" action="/search" method="GET">
+      <form class="search-form" role="search" action="" method="GET">
         <input
           class="input search-form__input_wide"
           type="search"
@@ -74,18 +74,18 @@
           name="artist"
           placeholder="Artist"
         />
-        <div class="input input_select">
-          <select id="genre" name="genre">
-            <option selected value="">Genre</option>
+        <div class="input input_select-wrapper">
+          <select class="input__select" id="genre" name="genre">
+            <option selected value>Genre</option>
             <option value="rock">Rock</option>
             <option value="electronic">Electronic</option>
             <option value="pop">Pop</option>
             <option value="jazz">Jazz</option>
           </select>
         </div>
-        <div class="input input_select">
-          <select id="decade" name="decade">
-            <option hidden selected value>Decade</option>
+        <div class="input input_select-wrapper">
+          <select class="input__select" id="decade" name="decade">
+            <option selected value>Decade</option>
             <option value="1950-60">1950-60 рр.</option>
             <option value="1960-70">1960-70 рр.</option>
             <option value="1970-80">1970-80 рр.</option>
@@ -96,9 +96,9 @@
             <option value="2020-30">2020-30 рр.</option>
           </select>
         </div>
-        <div class="input input_select search-form__input_wide">
-          <select id="country" name="country">
-            <option hidden selected value>Country</option>
+        <div class="input input_select-wrapper search-form__input_wide">
+          <select class="input__select" id="country" name="country">
+            <option selected value>Country</option>
             <option value="us">US</option>
             <option value="uk">UK</option>
             <option value="germany">Germany</option>
@@ -106,11 +106,13 @@
             <option value="japan">Japan</option>
           </select>
         </div>
-        <button class="search-form__input_wide" type="submit">Search</button>
+        <button class="button__primary search-form__input_wide" type="submit">
+          Search
+        </button>
       </form>
     </section>
 
-    <main>
+    <main class="button__primary">
       <article>
         <button></button>
         <figure></figure>

@@ -125,10 +125,32 @@ button {
   color: var(--ink-light);
 }
 
-select {
+.input_select-wrapper {
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+}
+
+/* Custom arrow */
+.input_select-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 8px;
+  top: 18px;
+  right: 12px;
+  background: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%230A2530' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.input__select {
   appearance: none;
   -webkit-appearance: none;
   border: none;
+  border-radius: 4px;
+  padding: 11px 14px;
   width: 100%;
   outline: none;
   cursor: pointer;
@@ -136,37 +158,12 @@ select {
   font-size: 1rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
-  color: var(--secondary);
-}
-
-select[selected]:is([hidden='']) {
   color: var(--ink-light);
 }
 
-/* Custom select */
-/* .custom-select {
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, .55);
-} */
-
-/* Custom arrow */
-/* .custom-select::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 15.5px;
-  top: 8px;
-  right: 0px;
-  background-image: url(images/select-arrow.svg);
-  cursor: pointer;
-  z-index: -1;
-} */
-
-/* select:focus {
-  border-bottom: 1px solid #71870E;
-  padding-bottom: 4px;
-} */
+.input__select:focus {
+  outline: 2px solid var(--primary);
+}
 
 /* Helper Class to hide text visually but keep it accessible for screen reader or other assistive software. */
 .visually-hidden {
