@@ -166,15 +166,23 @@ button {
   outline: 2px solid var(--primary);
 }
 
-.button__primary {
+.button {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--primary);
   border-radius: 4px;
-  padding: 12px;
   transition: all 0.2s;
+  padding: 12px;
+  width: 100%;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button__primary {
+  background-color: var(--primary);
 }
 
 .button__primary:hover,
@@ -182,14 +190,20 @@ button {
   background-color: var(--secondary);
 }
 
-.button__primary:active {
-  transform: translateY(1px);
+.button__secondary {
+  background-color: var(--secondary);
+}
+
+.button__secondary:hover,
+.button__secondary:focus {
+  background-color: var(--primary);
 }
 
 .records-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  column-gap: 12px;
+  row-gap: 14px;
 }
 
 .record {
@@ -211,6 +225,7 @@ button {
 .record__cover {
   max-width: 100%;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .record__title {
@@ -218,6 +233,7 @@ button {
   font-size: 0.875rem;
   color: var(--secondary);
   font-weight: 700;
+  margin-bottom: 3px;
 }
 
 .record__artist {
@@ -225,6 +241,32 @@ button {
   font-size: 0.875rem;
   color: var(--secondary);
   font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.record__info {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--secondary);
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+.record__info-name {
+  margin-right: 0.2em;
+  color: var(--ink);
+}
+
+.record__button {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.record__button .icon {
+  stroke-width: 1.66667;
+  padding: 2px;
 }
 
 /* Helper Class to hide text visually but keep it accessible for screen reader or other assistive software. */
