@@ -222,6 +222,11 @@ button {
   border-radius: 4px;
   padding: 4px;
   display: flex;
+  transition: transform 0.2s;
+}
+
+.record__btn-favorite:hover {
+  transform: scale(1.15);
 }
 
 .record__cover {
