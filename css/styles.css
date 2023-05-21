@@ -209,6 +209,7 @@ button {
 
 .record {
   position: relative;
+  overflow: hidden;
 }
 
 .record__btn-favorite {
@@ -258,9 +259,15 @@ button {
   margin-bottom: 3px;
 }
 
-.record__info-name {
+.record__info_name {
   margin-right: 0.2em;
   color: var(--ink);
+}
+
+.text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .record__button {
