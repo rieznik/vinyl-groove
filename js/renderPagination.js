@@ -3,15 +3,17 @@ const renderPagination = (totalRecords, recordsPerPage, currentPage) => {
   paginationListElement.innerHTML = '';
   const totalPages = Math.ceil(totalRecords / recordsPerPage);
 
+  console.log('renderPagination current page', currentPage);
   for (let i = 1; i <= totalPages; i++) {
     const pageElement = document.createElement('li');
     pageElement.classList = 'pagination__page';
 
-    pageElement.innerHTML = `<a href="index.html?page=${i}">${i}</a>`;
-
     if (i === currentPage) {
       pageElement.classList.add('pagination__page_active');
     }
+
+    pageElement.innerHTML = `<a href="index.html?page=${i}">${i}</a>`;
+
     paginationListElement.appendChild(pageElement);
   }
 };
