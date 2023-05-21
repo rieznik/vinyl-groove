@@ -1,4 +1,5 @@
 import { createRecordCardElement } from './createRecordCardHTML.js';
+import { getFavoriteRecords } from './utils.js';
 
 const renderRecords = (records, recordsPerPage, currentPage) => {
   const recordsCatalogElement = document.querySelector('.records-grid');
@@ -15,6 +16,21 @@ const renderRecords = (records, recordsPerPage, currentPage) => {
   currentPageRecords.forEach((record) => {
     recordsCatalogElement.appendChild(createRecordCardElement(record));
   });
+
+  const favoriteRecords = getFavoriteRecords();
+  if (!!favoriteRecords) {
+    const currentPageFavoriteRecords = currentPageRecords.filter((record) =>
+      favoriteRecords.includes(record.id)
+    );
+
+    currentPageFavoriteRecords.forEach(({ id }) => {
+      console.log(id);
+      const favoriteRecordElement = document.querySelector(
+        `button[data-record_id="${id}"]`
+      );
+      favoriteRecordElement.classList.add('record__btn-favorite_active');
+    });
+  }
 };
 
 export { renderRecords };
