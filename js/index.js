@@ -6,7 +6,7 @@ import { paginationLinkListener } from './paginationLinkListener.js';
 import { getCurrentPage } from './utils.js';
 
 const startApp = () => {
-  const recordsPerPage = 2;
+  const recordsPerPage = 6;
   const currentPage = getCurrentPage();
 
   backButtonListener();
