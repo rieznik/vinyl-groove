@@ -1,11 +1,11 @@
 import { backButtonListener } from './backButtonListener.js';
-import { records } from './sample-record-data.js';
-import { renderRecords } from './renderRecords.js';
+import { renderRecords, renderPagination } from './renderCatalog.js';
 
 const startApp = () => {
   console.log('start');
   backButtonListener();
-  renderRecords(records);
+  renderRecords();
+  renderPagination();
 };
 
 document.addEventListener('DOMContentLoaded', startApp);
