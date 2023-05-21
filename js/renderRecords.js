@@ -1,7 +1,7 @@
 import { createRecordCardElement } from './createRecordCardHTML.js';
 
 const recordsCatalogElement = document.querySelector('.records-grid');
-const recordsPerPage = 4;
+const recordsPerPage = 6;
 const currentPage = 1;
 
 const renderRecords = (records) => {

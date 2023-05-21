@@ -1,19 +1,3 @@
-const getRecordStylesLinks = (styles) => {
-  const stylesLinksElement = document.createElement('li');
-  stylesLinksElement.classList = 'record__info text-overflow';
-  stylesLinksElement.innerHTML =
-    '<span class="record__info_name">Style :</span>';
-
-  styles.forEach((style) => {
-    const styleLinkElement = document.createElement('a');
-    styleLinkElement.href = `#${style}`;
-    styleLinkElement.innerText = `${style}`;
-    stylesLinksElement.appendChild(styleLinkElement);
-  });
-
-  return `${stylesLinksElement}`;
-};
-
 const createRecordCardElement = ({
   id,
   coverImages,
@@ -21,6 +5,7 @@ const createRecordCardElement = ({
   artist,
   year,
   styles,
+  country,
 }) => {
   const recordCardElement = document.createElement('article');
   recordCardElement.id = id;
@@ -69,12 +54,13 @@ const createRecordCardElement = ({
     </h2>
     <ul>
       <li class="record__info text-overflow">
-        <span class="record__info_name">Year :</span><a href="#${id}">${year}</a>
+        <span class="record__info_name">Year :</span>${year}
       </li>
-      ${getRecordStylesLinks(styles)}
       <li class="record__info text-overflow">
-        <span class="record__info_name">Country :</span
-        ><a href="">The Netherlands</a>
+            <span class="record__info_name">Style :</span>${styles.join(', ')}
+          </li>
+      <li class="record__info text-overflow">
+        <span class="record__info_name">Country :</span>${country}
       </li>
     </ul>
     <button class="button button__secondary record__button">
