@@ -68,6 +68,7 @@ button {
   gap: 10px;
   align-items: center;
   transition: transform 0.2s;
+  fill: none;
 }
 
 .icon {
@@ -76,6 +77,7 @@ button {
   height: 100%;
   width: 20px;
   stroke: currentColor;
+  fill: inherit;
 }
 
 .header__btn .icon_heart {
@@ -93,10 +95,13 @@ button {
 }
 
 .header__btn:hover,
-.header__btn:focus,
+.header__btn:focus {
+  outline: none;
+  fill: currentColor;
+}
+
 .header__btn:active {
   transform: translateY(1px);
-  outline: none;
 }
 
 .search-form {
@@ -223,6 +228,11 @@ button {
   padding: 4px;
   display: flex;
   transition: transform 0.2s;
+  fill: none;
+}
+
+.record__btn-favorite_active {
+  fill: currentColor;
 }
 
 .record__btn-favorite:hover {

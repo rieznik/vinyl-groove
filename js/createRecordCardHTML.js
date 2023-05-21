@@ -11,7 +11,7 @@ const createRecordCardElement = ({
   recordCardElement.id = id;
   recordCardElement.classList = 'record';
   recordCardElement.innerHTML = `
-    <button class="record__btn-favorite">
+    <button data-record-id="${id}" class="record__btn-favorite">
       <svg
         class="icon icon_heart"
         role="img"
