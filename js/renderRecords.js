@@ -24,7 +24,6 @@ const renderRecords = (records, recordsPerPage, currentPage) => {
     );
 
     currentPageFavoriteRecords.forEach(({ id }) => {
-      console.log(id);
       const favoriteRecordElement = document.querySelector(
         `button[data-record_id="${id}"]`
       );

@@ -3,7 +3,7 @@ import { records } from './sample-record-data.js';
 import { renderRecords } from './renderRecords.js';
 import { renderPagination } from './renderPagination.js';
 import { paginationLinkListener } from './paginationLinkListener.js';
-import { addToFavoritesListener } from './addToFavoritesListener.js';
+import { favoritesButtonListener } from './favoritesButtonListener.js';
 import { getCurrentPage } from './utils.js';
 
 const startApp = () => {
@@ -20,7 +20,7 @@ const startApp = () => {
     renderPagination(records.length, recordsPerPage, clickedPage);
   });
 
-  addToFavoritesListener();
+  favoritesButtonListener();
 };
 
 document.addEventListener('DOMContentLoaded', startApp);
