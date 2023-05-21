@@ -1,9 +1,9 @@
 const backButtonElement = document.querySelector('button.header__btn');
 
-const backButtonListener = () => {
+const backButtonHandler = () => {
   backButtonElement.addEventListener('click', () => {
     history.back();
   });
 };
 
-export { backButtonListener };
+export { backButtonHandler };
