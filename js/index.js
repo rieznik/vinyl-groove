@@ -5,6 +5,7 @@ import { renderPagination } from './renderPagination.js';
 import { paginationLinkListener } from './paginationLinkListener.js';
 import { favoritesButtonListener } from './favoritesButtonListener.js';
 import { windowResizeListener } from './windowResizeListener.js';
+import { artistInputListener } from './artistInputListener.js';
 import { getCurrentPage } from './utils.js';
 
 const startApp = () => {
@@ -17,7 +18,7 @@ const startApp = () => {
   renderPagination(records.length, recordsPerPage, currentPage);
 
   backButtonListener();
-
+  artistInputListener();
   favoritesButtonListener();
 
   paginationLinkListener((clickedPage) => {
