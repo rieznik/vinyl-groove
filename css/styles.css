@@ -40,7 +40,7 @@ button {
 }
 
 .container {
-  padding: 0 20px;
+  margin: 0 20px;
 }
 
 .header {
@@ -106,13 +106,13 @@ button {
 
 .search-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   padding-top: 18px;
   padding-bottom: 18px;
 }
 
-.search-form__input_wide {
+.search-form__input_wide-mobile {
   grid-column: span 2;
 }
 
@@ -206,10 +206,10 @@ button {
 
 .records-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 12px;
   row-gap: 14px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .record {
@@ -343,4 +343,38 @@ button {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .search-form {
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 30px;
+  }
+
+  .search-form__input_wide-mobile {
+    grid-column: span 1;
+  }
+
+  .search-form__input_wide-desktop {
+    grid-column: span 4;
+  }
+
+  .records-grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    padding-bottom: 40px;
+  }
 }
